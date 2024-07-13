@@ -127,7 +127,7 @@
     
   }
 
-  //topbar
+  //topbar search bar==========================================
   
   .top-bar {
     display: flex;
@@ -171,28 +171,11 @@
     }
   }
   
-  .user-profile {
-    display: flex;
-    align-items: center;
-  
-  }
-  
-  .user-profile .username {
-    margin-left: 8px;
-  }
-  
-  .page-tracker {
-    flex: 1; 
-    text-align: right; 
-    color: #FBF8DD;
-    padding: 8px;
-    background: #FBF8DD;
-    border-radius: 8px;
-  }
-  
+ // end search bar==========================================================================
 
-  //hero
 
+
+  //hero please note that it can be removed replace with the actual one
 
   // src/components/HeroSection.scss
 .hero {
@@ -239,7 +222,7 @@
 
  
 
-// Add your custom styles
+// Add your custom styles to buttom bar here
 .ant-menu-item, .ant-menu-submenu-title {
   display: flex;
   align-items: center;
@@ -269,3 +252,4 @@
     font-weight: 700 !important;
   }
 }
+//end here=========
