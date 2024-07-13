@@ -4,87 +4,34 @@ import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   DashboardOutlined,
-  BarChartOutlined,
-  ShoppingCartOutlined,
-  AppstoreOutlined,
-  UsergroupAddOutlined,
-  SettingOutlined,
-  LogoutOutlined,
+ AppstoreOutlined,
+   LogoutOutlined,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, ConfigProvider } from 'antd';
-import './sidebar.scss'; // Import the CSS/SCSS file
-import ThemeToggle from './Themes'; // Import the theme toggle component
-import TopBar from './Topbar'; // Import the TopBar component
+import './sidebar.scss'; 
+import ThemeToggle from './Themes'; 
+import TopBar from './Topbar'; 
 import LoginPage from './LoginPage';
-import Hero from './Hero';
+import Store from './Store';
 
 const { Header, Sider, Content } = Layout;
 
-const Dashboard = () => <div>Dashboard Content</div>;
-const Analyst = () => <div>Analyst Content</div>;
-const Orders = () => <div>Orders Content</div>;
-const Products = () => <div>Products Content</div>;
-const Customers = () => <div>Customers Content</div>;
-const Settings = () => <div>Settings Content</div>;
+const Bag = () => <div>BAG====// Content</div>; // remove the once you have created the store page.....by future
 
 const menuItemsTop = [
   {
     key: '1',
     icon: <DashboardOutlined />,
-    label: 'Dashboard',
-    subMenuItems: [
-      {
-        key: '5-1',
-        label: 'myDashboard',
-        link: '/Hero',
-      },
-      {
-        key: '5-2',
-        label: 'Dashboard',
-        link: '/',
-      },
-    ],
-  },
-  {
-    key: '2',
-    icon: <BarChartOutlined />,
-    label: <Link to="/analyst">Analyst</Link>,
-  },
-  {
-    key: '3',
-    icon: <ShoppingCartOutlined />,
-    label: <Link to="/orders">Orders</Link>,
+    label: <Link to="/Store">Store</Link>,
   },
   {
     key: '4',
     icon: <AppstoreOutlined />,
-    label: <Link to="/products">Products</Link>,
-  },
-  {
-    key: '5',
-    icon: <UsergroupAddOutlined />,
-    label: 'Customers',
-    subMenuItems: [
-      {
-        key: '5-1',
-        label: 'All Customers',
-        link: '/customers',
-      },
-      {
-        key: '5-2',
-        label: 'Add Customer',
-        link: '/customers/add',
-      },
-    ],
+    label: <Link to="/Bag">Bag</Link>,
   },
 ];
 
 const menuItemsBottom = [
-  {
-    key: '6',
-    icon: <SettingOutlined />,
-    label: <Link to="/settings">Settings</Link>,
-  },
   {
     key: '7',
     icon: <LogoutOutlined />,
@@ -116,6 +63,7 @@ const Sidebar = () => {
             <Menu
               theme={theme === 'light' ? 'light' : 'dark'}
               mode="inline"
+              className='topp'
               defaultSelectedKeys={['1']}
             >
               {menuItemsTop.map(item => {
@@ -171,13 +119,8 @@ const Sidebar = () => {
             </Header>
             <Content className="content-style">
               <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/Hero" element={<Hero />} />
-                <Route path="/analyst" element={<Analyst />} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/products" element={<Products />} />
-                <Route path="/customers" element={<Customers />} />
-                <Route path="/settings" element={<Settings />} />
+                <Route path="/Bag" element={<Bag />} />     
+                <Route path="/Store" element={<Store />} />
                 <Route path="/LoginPage" element={<LoginPage />} />
               </Routes>
             </Content>
