@@ -144,13 +144,15 @@
     margin-right: 850px;
     justify-content: center;
     display: flex;
-    margin-top: 50px;
+    margin-top: 80px;
     align-items: center;
     padding:  40px 10px;
+ 
+  
     
     input{
-      padding:50px 40px 10px 200px  !important;
-     
+      padding:20px 40px 15px 200px  !important;
+    
     
     }
     ::placeholder{
@@ -159,10 +161,9 @@
       padding: 0 !important;
     opacity: .6;
       position: relative;
-      right: 180px;
+      right: 190px;
       top: 0;
       color: black !important;
-      background: white !important;
       border-radius: 5px;
       width: 100%;
       border: none;
