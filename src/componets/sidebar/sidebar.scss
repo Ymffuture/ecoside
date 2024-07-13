@@ -39,8 +39,9 @@
     padding: 0;
     // background: #d1c12b !important;
     position: absolute;
-    left: 14px;
+    left: 6px;
     top: 100px;
+  
   }
   
   .content-style {
@@ -62,11 +63,23 @@
   
   .menu-bottom {
     position: relative;
-    bottom: -650px;
+    bottom: -750px;
     background: #ca0202;
     font-weight: 700;
     border-radius: 8px;
     width: 140px;
+    .anticon{
+      color: white !important;
+      font-weight: 800 !important;
+    }
+    &:hover {
+      .anticon {
+        color: white;
+        border-radius: 50%;
+        font-weight: 700;
+        padding: 4px;
+      }
+    }
   
   }
 
@@ -120,15 +133,30 @@
   }
   
   .search-bar {
-    margin-right: 226px;
+    margin-right: 850px;
     justify-content: center;
     display: flex;
     align-items: center;
     padding:  50px 10px;
     input{
-      padding: 20px 20px 0 120px !important;
+      padding: 20px 20px 0 220px !important;
+    
     }
-  
+    ::placeholder{
+      text-align: center !important;
+      justify-content: center !important;
+      padding: 0 !important;
+    opacity: .6;
+      position: relative;
+      right: 180px;
+      top: 0;
+      color: black !important;
+      background: white !important;
+      border-radius: 5px;
+      width: 100%;
+      border: none;
+      outline: none;
+    }
   }
   
   .user-profile {

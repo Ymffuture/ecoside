@@ -10,7 +10,7 @@ const TopBar = () => {
   return (
     <div className="top-bar"> 
       <div className="search-bar">
-        <Input placeholder="Search..." prefix={<SearchOutlined />} />
+        <Input placeholder="Apple Watch,Samsun S21,Macbook Pro" prefix={<SearchOutlined />} />
       </div>
     </div>
   );

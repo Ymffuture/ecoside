@@ -1,12 +1,14 @@
+// Sidebar.jsx
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  DashboardOutlined,
- AppstoreOutlined,
-   LogoutOutlined,
-} from '@ant-design/icons';
+  faBars,
+  faTachometerAlt,
+  faShoppingBag,
+  faSignOutAlt,
+  faStore,
+} from '@fortawesome/free-solid-svg-icons';
 import { Button, Layout, Menu, ConfigProvider } from 'antd';
 import './sidebar.scss'; 
 import ThemeToggle from './Themes'; 
@@ -21,12 +23,12 @@ const Bag = () => <div>BAG====// Content</div>; // remove the once you have crea
 const menuItemsTop = [
   {
     key: '1',
-    icon: <DashboardOutlined />,
+    icon: <FontAwesomeIcon icon={faStore} />,
     label: <Link to="/Store">Store</Link>,
   },
   {
     key: '4',
-    icon: <AppstoreOutlined />,
+    icon: <FontAwesomeIcon icon={faShoppingBag} />,
     label: <Link to="/Bag">Bag</Link>,
   },
 ];
@@ -34,7 +36,7 @@ const menuItemsTop = [
 const menuItemsBottom = [
   {
     key: '7',
-    icon: <LogoutOutlined />,
+    icon: <FontAwesomeIcon icon={faSignOutAlt} />,
     label: <Link to="/LoginPage">Log Out</Link>,
   },
 ];
@@ -66,33 +68,11 @@ const Sidebar = () => {
               className='topp'
               defaultSelectedKeys={['1']}
             >
-              {menuItemsTop.map(item => {
-                if (item.subMenuItems) {
-                  return (
-                    <Menu.SubMenu
-                      key={item.key}
-                      title={
-                        <span>
-                          {item.icon}
-                          <span>{item.label}</span>
-                        </span>
-                      }
-                    >
-                      {item.subMenuItems.map(subItem => (
-                        <Menu.Item key={subItem.key}>
-                          <Link to={subItem.link}>{subItem.label}</Link>
-                        </Menu.Item>
-                      ))}
-                    </Menu.SubMenu>
-                  );
-                } else {
-                  return (
-                    <Menu.Item key={item.key} icon={item.icon}>
-                      {item.label}
-                    </Menu.Item>
-                  );
-                }
-              })}
+              {menuItemsTop.map(item => (
+                <Menu.Item key={item.key} icon={item.icon}>
+                  {item.label}
+                </Menu.Item>
+              ))}
             </Menu>
             <Menu
               theme={theme === 'light' ? 'light' : 'dark'}
@@ -107,7 +87,7 @@ const Sidebar = () => {
               <div className="header-content">
                 <Button
                   type="text"
-                  icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+                  icon={collapsed ? <FontAwesomeIcon icon={faBars} /> : <FontAwesomeIcon icon={faBars} />}
                   onClick={() => setCollapsed(!collapsed)}
                   style={{
                     fontSize: '16px',
