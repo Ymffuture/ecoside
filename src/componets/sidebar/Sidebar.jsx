@@ -53,17 +53,17 @@ const Sidebar = () => {
     <ConfigProvider theme={{
       // Apply theme based on current state
       token: {
-        colorBgBase: theme === 'light' ? '#ffffff' : '#001529',
-        colorText: theme === 'light' ? '#000000' : '#ffffff',
+        colorBgBase: theme === 'light' ? '#ffffff' : 'gray',
+        colorText: theme === 'light' ? '#000122' : '#ffffff',
         colorBgContainer: theme === 'light' ? '#ffffff' : '#001529',
       }
     }}>
       <Router>
         <Layout>
-          <Sider trigger={null} collapsible collapsed={collapsed} style={{ background: theme === 'light' ? '#ffffff' : '#001529' }}>
+          <Sider trigger={null} collapsible collapsed={collapsed} style={{ background: theme === 'light' ? '#ffffff' : 'gray' }}>
             <div className="demo-logo-vertical" />
             <Menu
-              theme={theme === 'light' ? 'light' : 'dark'}
+              theme={theme === 'light' ? '#ffffff' : 'gray'}
               mode="inline"
               className='topp'
               defaultSelectedKeys={['1']}
