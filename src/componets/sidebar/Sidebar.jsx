@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faBars,
-  faTachometerAlt,
+  // faTachometerAlt,
   faShoppingBag,
   faSignOutAlt,
   faStore,
@@ -12,9 +12,8 @@ import {
 import { Button, Layout, Menu, ConfigProvider } from 'antd';
 import './sidebar.scss'; 
 import ThemeToggle from './Themes'; 
-import TopBar from './Topbar'; 
 import LoginPage from './LoginPage';
-import Store from './Store';
+import ListItem from '../ListItem';
 
 const { Header, Sider, Content } = Layout;
 
@@ -24,7 +23,7 @@ const menuItemsTop = [
   {
     key: '1',
     icon: <FontAwesomeIcon icon={faStore} />,
-    label: <Link to="/Store">Store</Link>,
+    label: <Link to="/">Store</Link>,
   },
   {
     key: '4',
@@ -82,7 +81,6 @@ const Sidebar = () => {
             />
           </Sider>
           <Layout>
-            <TopBar />
             <Header className="layout-header">
               <div className="header-content">
                 <Button
@@ -100,10 +98,10 @@ const Sidebar = () => {
             <Content className="content-style">
               <Routes>
                 <Route path="/Bag" element={<Bag />} />     
-                <Route path="/Store" element={<Store />} />
+                <Route path="/" element={<ListItem />} /> 
                 <Route path="/LoginPage" element={<LoginPage />} />
               </Routes>
-            </Content>
+            </Content> 
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           </Layout>
         </Layout>

@@ -1,10 +1,10 @@
+import Dashboard from './pages/Dashboard';
 
-import Sidebar from './componets/sidebar/Sidebar';
 function App() {
   return (
-    <div className="App">
-     <Sidebar/>
-    </div>
+    <>
+      <Dashboard />
+    </>
   );
 }
 
