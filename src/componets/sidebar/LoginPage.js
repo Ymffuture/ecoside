@@ -1,6 +1,6 @@
 // LoginPage.js
 import React, { useState } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Form, Input, Button, Space } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
