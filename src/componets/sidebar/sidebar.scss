@@ -1,195 +1,190 @@
+.layout-header {
+  padding: 0;
+  background: var(--color-bg-container);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  position: relative;
+  width: 100%;
+  z-index: 1000;
+}
 
-  .layout-header {
-    padding: 0;
-    background: #d6c423;
-  
-  }
-  
-  .content-style {
-    margin: 24px 16px;
-    padding: 24px;
-    min-height: 280px;
-    background: var(--color-bg-container);
-    border-radius: var(--border-radius-lg);
-  }
-  
-  .ant-layout-sider {
-    height: 100vh;
-    background: #ffffff !important;
-   border-radius: 20px;
-   margin: 10px;
-   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    
-  }
- .topp{
+.content-style {
+  background: #ffffff;
+  padding: 24px;
+  min-height: calc(90vh - 120px);
+  margin-top: 120px;
+  border-radius: 8px;
+}
+
+.ant-layout-sider {
+  background: #ffffff !important;
+  border-radius: 8px !important;
+  margin: 8px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.topp {
   margin-top: 90px !important;
-  
- }
-  .demo-logo-vertical {
-    height: 32px;
-    margin: 16px;
-    right: 5px;
-    position: relative;
-    background-image: url('../../assets/Logo\ Maker\ 2024_07_12_01_59_11.png');
-    align-items: center;
-    justify-content: center;
-    height: 5vh;
-    background-size: cover;
-    background-position: center;
-  }
-  
-  .layout-header {
-    padding: 0;
-    // background: #d1c12b !important;
-    position: absolute;
-    left: 14px;
-    top: 100px;
-  
-  }
-  
-  .content-style {
-    margin: 24px 16px;
-    padding: 24px;
-    min-height: 280px;
-    background: rgb(255, 166, 0);
-    border-radius: var(--border-radius-lg);
-  }
-  
-  .ant-layout-sider {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-   
-  }
-  
-  .menu-bottom {
-    position: relative;
-    bottom: -750px;
-    background: #ff0000d7;
-    font-weight: 700;
-    border-radius: 50px;
-    width: 150px;
-    padding: 1px 1px 1px 2px;
-    margin-left: 8px;
-    margin-right: 10px;
+}
+.demo-logo-vertical {
+  height: 32px;
+  margin: 10px;
+  right: 2px;
+  position: relative;
+  background-image: url("../../assets/Logo\ Maker\ 2024_07_12_01_59_11.png");
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  background-size: cover;
+  background-position: center;
+}
 
-    .menu-icon-2 {
-      font-size: 20px !important;  
-      color: #ffffff !important;
-      margin-left: 8px !important;
-      &:hover{
-        background: #d6c423 !important;
-      }
-    }
-  }
-  
-  // sidebar.scss
+// menu bar
+.layout-header {
+  padding: 0;
+  // background: #d1c12b !important;
+  position: absolute;
+  left: 14px;
+  top: 100px;
+  width: 5%;
+}
 
-  
-  .layout-header {
-    padding: 0;
-    background: var(--color-bg-container);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 16px;
-  }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  // .content-style {
-  //   background: #ffffff;
-  //   padding: 24px;
-  //   min-height: 280px;
-  //   border-radius: 8px;
-  // }
-  
-  .ant-layout-sider {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .menu-bottom {
-    margin-bottom: 16px;
-    
-  }
+.content-style {
+  margin: 24px 16px;
+  padding: 24px;
+  min-height: 280px;
+  border-radius: var(--border-radius-lg);
+}
 
-  //hero please note that it can be removed replace with the actual one
+.ant-layout-sider {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
 
-  // src/components/HeroSection.scss
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30vh;
-    background-image: url('../../assets/Logo\ Maker\ 2024_07_12_01_59_11.png');
-    background-size: cover;
-    background-position: center;
-  
-    &__content {
-      text-align: center;
-      color: rgb(34, 12, 12);
-    }
-  
-    &__title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-  
-    &__subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  
-    &__button {
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      color: white;
-      background-color: #000320;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  
-      &:hover {
-        background-color: #001730;
-        padding: 8px;
-      }
-    }
-  }
-  
-
- 
-
-// Add your custom styles to buttom bar here
-.ant-menu-item, .ant-menu-submenu-title {
+.menu-bottom {
+  position: relative;
+  top: 700px;
+  left: 0;
+  background: #ff0000d7;
+  font-weight: 700;
+  border-radius: 10px;
+  width: 150px;
+  padding: 2px;
   display: flex;
   align-items: center;
-color: #001730 !important;
-  &:hover{
+  margin: 10px;
+
+  @media (max-width: 1268px) {
+    top: 600px;
+  }
+
+  @media (max-width: 1295px) { 
+      top: 500px;
+     
+    
+  }
+  @media (max-width: 375px) { 
+    top: 350px;
+    
+  
+}
+@media (max-width: 414px) { 
+  top: 570px;
+
+
+}
+@media (max-width: 430px) { 
+  top: 590px;
+  
+
+}
+@media (max-width: 390px) { 
+  top: 530px;
+
+
+}
+@media (max-width: 1280px) { 
+  top: 600px;
+  background: rgb(88, 153, 51) !important; 
+
+}
+@media (max-width: 1024px) { 
+  top: 680px;
+
+
+}
+}
+
+.menu-icon-2 {
+  font-size: 20px !important;
+  color: #ffffff !important;
+  margin-left: 8px !important;
+}
+
+// sidebar.scss
+
+.layout-header {
+  padding: 0;
+  background: var(--color-bg-container);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.content-style {
+  background: #ffffff;
+  padding: 24px;
+  min-height: 280px;
+  border-radius: 8px;
+}
+
+.ant-layout-sider {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-bottom {
+  margin-bottom: 16px;
+}
+
+// Add your custom styles to buttom bar here
+.ant-menu-item,
+.ant-menu-submenu-title {
+  display: flex;
+  align-items: center !important;
+justify-content: space-around !important;
+  color: #001730 !important;
+  &:hover {
     background: #000320 !important;
     color: #ffffff !important;
   }
-  .menu-icon{
-    padding: 10px;
-
+  .menu-icon {
+    padding: 12px;
+    display: flex   !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.8s, color 0.8s;
   }
 
   &:hover {
-    .menu-icon{
+    .menu-icon {
       color: #ffffff !important;
       background: #000320 !important;
       border-radius: 50%;
-  
     }
-   
   }
 
   .menu-icon {
@@ -199,25 +194,18 @@ color: #001730 !important;
   .menu-link {
     color: #000320; // Default text color
     text-decoration: none; // Remove underline
-  
+    margin: 10px !important;
     &:hover {
       color: #ffffff; // Change color on hover
       font-weight: 600;
     }
   }
-  
 }
-
 
 .ant-menu-item {
   padding: 0 10px !important;
-
- 
 }
-//end here=========
 
 .menu-icon {
-  font-size: 22px !important;  
-
-
+  font-size: 22px !important;
 }
