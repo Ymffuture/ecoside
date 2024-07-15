@@ -23,12 +23,12 @@ const Bag = () => <div>BAG====// Content</div>; // remove the once you have crea
 const menuItemsTop = [
   {
     key: '1',
-    icon: <FontAwesomeIcon icon={faStore} />,
+    icon: <FontAwesomeIcon icon={faStore} className="menu-icon" />,
     label: <Link to="/Store">Store</Link>,
   },
   {
     key: '4',
-    icon: <FontAwesomeIcon icon={faShoppingBag} />,
+    icon: <FontAwesomeIcon icon={faShoppingBag} className="menu-icon" />,
     label: <Link to="/Bag">Bag</Link>,
   },
 ];
@@ -36,7 +36,7 @@ const menuItemsTop = [
 const menuItemsBottom = [
   {
     key: '7',
-    icon: <FontAwesomeIcon icon={faSignOutAlt} />,
+    icon: <FontAwesomeIcon icon={faSignOutAlt} className="menu-icon-2" />,
     label: <Link to="/LoginPage">Log Out</Link>,
   },
 ];
@@ -54,16 +54,16 @@ const Sidebar = () => {
       // Apply theme based on current state
       token: {
         colorBgBase: theme === 'light' ? '#ffffff' : 'gray',
-        colorText: theme === 'light' ? '#000122' : '#ffffff',
+        colorText: theme === 'light' ? '#000122' : 'black',
         colorBgContainer: theme === 'light' ? '#ffffff' : '#001529',
       }
     }}>
       <Router>
         <Layout>
-          <Sider trigger={null} collapsible collapsed={collapsed} style={{ background: theme === 'light' ? '#ffffff' : 'gray' }}>
+          <Sider trigger={null} collapsible collapsed={collapsed} style={{ background: theme === 'light' ? 'black' : 'black' }}>
             <div className="demo-logo-vertical" />
             <Menu
-              theme={theme === 'light' ? '#ffffff' : 'gray'}
+              theme={theme === 'light' ? 'black' : 'gray'}
               mode="inline"
               className='topp'
               defaultSelectedKeys={['1']}
