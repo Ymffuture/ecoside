@@ -172,7 +172,7 @@
 .ant-menu-item, .ant-menu-submenu-title {
   display: flex;
   align-items: center;
-
+color: #001730 !important;
   &:hover{
     background: #000320 !important;
     color: #ffffff !important;
@@ -192,9 +192,20 @@
    
   }
 
-  .anticon {
-    transition: background-color 0.3s, color 0.3s;
+  .menu-icon {
+    transition: background-color 0.8s, color 0.8s;
   }
+
+  .menu-link {
+    color: #000320; // Default text color
+    text-decoration: none; // Remove underline
+  
+    &:hover {
+      color: #ffffff; // Change color on hover
+      font-weight: 600;
+    }
+  }
+  
 }
 
 

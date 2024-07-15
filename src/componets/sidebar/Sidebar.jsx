@@ -24,12 +24,12 @@ const menuItemsTop = [
   {
     key: '1',
     icon: <FontAwesomeIcon icon={faStore} className="menu-icon" />,
-    label: <Link to="/Store">Store</Link>,
+    label: <Link to="/Store" className="menu-link">Store</Link>,
   },
   {
     key: '4',
     icon: <FontAwesomeIcon icon={faShoppingBag} className="menu-icon" />,
-    label: <Link to="/Bag">Bag</Link>,
+    label: <Link to="/Bag" className="menu-link">Bag</Link>,
   },
 ];
 
