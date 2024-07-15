@@ -12,7 +12,7 @@ import {
 import { Button, Layout, Menu, ConfigProvider } from 'antd';
 import './sidebar.scss'; 
 import ThemeToggle from './Themes'; 
-import TopBar from './Topbar'; 
+// import TopBar from './Topbar'; 
 import LoginPage from './LoginPage';
 import Store from './Store';
 
@@ -82,7 +82,7 @@ const Sidebar = () => {
             />
           </Sider>
           <Layout>
-            <TopBar />
+        
             <Header className="layout-header">
               <div className="header-content">
                 <Button
